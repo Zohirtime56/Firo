@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع بيع الخدمات الرقمية</title>
+    <style>
+        /* التنسيقات العامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        /* الشريط العلوي */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        
+        /* قسم العرض */
+        #showcase {
+            min-height: 400px;
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            background-color: #34495e;
+        }
+        
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        
+        #showcase p {
+            font-size: 20px;
+        }
+        
+        /* الخدمات */
+        #services {
+            padding: 30px 0;
+        }
+        
+        .service-box {
+            float: right;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            background: #fff;
+            margin: 1%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* نموذج الاتصال */
+        #contact {
+            padding: 20px;
+            background: #f4f4f4;
+            margin-top: 20px;
+        }
+        
+        form {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        form label {
+            display: block;
+        }
+        
+        form input, form textarea {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        form button {
+            background: #e8491d;
+            color: #fff;
+            border: 0;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* التذييل */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        /* responsive */
+        @media(max-width: 768px) {
+            .service-box {
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+            
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الرأس -->
+    <header>
+        <div class="container">
+            <h1><a href="#">متجر الخدمات الرقمية</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">اتصل بي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم العرض الرئيسي -->
+    <section id="showcase">
+        <div class="container">
+            <h1>خدمات رقمية مبتكرة</h1>
+            <p>أقدم حلول برمجية مبتكرة تناسب احتياجاتك بميزانية مناسبة</p>
+        </div>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services" class="container">
+        <h2>خدماتي</h2>
+        <div class="service-box">
+            <h3>أكواد تغيير الألوان</h3>
+            <p>أقدم كود برمجي يحول الموقع من الأبيض إلى الأسود وبالعكس</p>
+            <p>السعر: مجاناً للتجربة</p>
+        </div>
+        <div class="service-box">
+            <h3>واجهة تسجيل الدخول</h3>
+            <p>تصميم متجاوب لواجهة تسجيل الدخول بجودة عالية</p>
+            <p>السعر: 5 دولار</p>
+        </div>
+        <div class="service-box">
+            <h3>تصميم موقع شخصي</h3>
+            <p>تصميم موقع شخصي بسيط بمدة 24 ساعة</p>
+            <p>السعر: 10 دولار</p>
+        </div>
+    </section>
+
+    <!-- نموذج الاتصال -->
+    <section id="contact" class="container">
+        <h2>اطلب خدمة أو استفسر</h2>
+        <form>
+            <div>
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" placeholder="اسمك">
+            </div>
+            <div>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" placeholder="بريدك الإلكتروني">
+            </div>
+            <div>
+                <label for="service">الخدمة المطلوبة:</label>
+                <select id="service">
+                    <option>كود تغيير الألوان</option>
+                    <option>واجهة تسجيل الدخول</option>
+                    <option>تصميم موقع شخصي</option>
+                </select>
+            </div>
+            <div>
+                <label for="message">الرسالة:</label>
+                <textarea id="message" placeholder="تفاصيل طلبك"></textarea>
+            </div>
+            <div>
+                <button type="submit">إرسال الطلب</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>متجر الخدمات الرقمية &copy; 2023</p>
+    </footer>
+
+    <script>
+        // كود جافاسكريبت بسيط لإضافة التفاعل
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لك! سنتواصل معك قريباً.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
